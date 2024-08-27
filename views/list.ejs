@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    h1 {
+        margin-left: 40%;
+    }
+
+   @media screen and (max-width: 768px) {
+    h1 {
+        text-align: center;
+        margin-left: 60%;
+    }
+   }
+</style>
+
+<body>
+
+    <h1>ADMIN</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="border: 1px solid brown; padding: 2px; width: 200px;">FIRST NAME</th>
+                <th style="border: 1px solid brown; padding: 2px; width: 200px;">LAST NAME</th>
+                <th style="border: 1px solid brown; padding: 2px; width: 200px;">EMAIL</th>
+                <th style="border: 1px solid brown; padding: 2px; width: 200px;">ADDRESS</th>
+                <th style="border: 1px solid brown; padding: 2px; width: 200px;">OCCUPATION</th>
+                <th style="border: 1px solid brown; padding: 2px; width: 200px;">PHONE NUMBER</th>
+                <th style="border: 1px solid brown; padding: 2px; width: 200px;">GENDER</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(element => {%>
+            <tr>
+            <td  style="border: 1px solid brown; text-align: center;"><p><%= element.firstname %></p></td>
+            <td  style="border: 1px solid brown; text-align: center;"><p><%= element.lastname %></p></td>
+            <td  style="border: 1px solid brown; text-align: center;"><p><%= element.email %></p></td>
+            <td  style="border: 1px solid brown; text-align: center;"><p><%= element.address %></p></td>
+            <td  style="border: 1px solid brown; text-align: center;"><p><%= element.occupation %></p></td>
+            <td style="border: 1px solid brown; text-align: center;"><p><%= element.phonenumber %></p></td>
+            <td style="border: 1px solid brown; text-align: center;"><p><%= element.gender %></p></td>
+        </tr>
+         <%  }); %>
+        </tbody>
+    </table>
+</body>
+</html>

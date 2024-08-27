@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
+        gap: 20px;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 40%;
+        margin-top: 20px;
+        height: 550px;
+    }
+
+    h1 {
+        font-size: 25px;
+        font-weight: normal;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    input {
+        width: 200px;
+        height: 30px;
+        outline: none;
+        border-radius: 10px;
+    }
+    input:last-child {
+        background-color: rebeccapurple;
+        cursor: pointer;
+        transition: 1.5s;
+    }
+
+    input:last-child:hover {
+        background-color: gray;
+    }
+
+    @media screen and (max-width: 768px) {
+        form {
+            margin: 0;
+            margin-left: 13%;
+            margin-top: 50px;
+            padding: 0;
+        }
+    }
+</style>
+<body>
+    <form action="/addsName" method="post">
+        <h1>GOOGLE FORMS</h1>
+        <input type="text" placeholder="first name" name="firstname">
+        <input type="text" placeholder="last name" name="lastname">
+        <input type="text" placeholder="email" name="email">
+        <input type="text" placeholder="address" name="address">
+        <input type="text" placeholder="occupation" name="occupation">
+        <input type="number" placeholder="phone number" name="phonenumber">
+        <input type="text" placeholder="gender" name="gender">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
